@@ -1,0 +1,231 @@
+// Universal border variable
+$divBorder: 1px solid black;
+// Color scheme variables
+$color1: #d8bd8a;
+$color2: #582817;
+$color3: #e4d9c3;
+
+$quoteFontSize: 2.5rem;
+
+// importing fonts from fonts.google.com
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+
+body {
+  background-color: $color1;
+}
+
+// header {
+//   // Styling to keep header in view when scrolling down
+//   position: sticky;
+//   top: 0;
+// }
+
+nav {
+  background-color: $color2;
+  border: $divBorder;
+  // Margin aligns header with div giving space at ends on page
+  margin: 0 2%;
+  // Padding adds space around header text
+  padding: 1.618% 4%;
+  // styling to align text on nav bar
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: antiquewhite;
+  font-family: EB garamond, sans-serif;
+  font-weight: bold;
+
+// Styling of nav website title
+  .name {
+    font-size: x-large;
+    margin-left: 10px;
+  }
+  // styling of nav bar page links
+  .webPages {
+    font-size: 150%;
+    margin-right: 2%;
+    a {
+      color: antiquewhite;
+      text-decoration: none;
+      margin-right: 20px;
+    }
+    // changes text color of links to match body background color when hovered over
+    a:hover {
+      color: $color1;
+    }
+  }
+}
+
+// specific styling for about page nav bar to reverse color scheme
+#aboutNav {
+  background-color: $color3;
+  border: $divBorder;
+  
+  .name {
+    color: $color2;
+    font-size: x-large;
+    margin-left: 10px;
+  }
+  .webPages {
+    font-size: 150%;
+    margin-right: 2%;
+    a {
+      color: $color2;
+      text-decoration: none;
+      margin-right: 20px;
+    }
+    a:hover {
+      color: $color1;
+    }
+  }
+
+}
+
+
+.container {
+  // Basic formatting for all container divs on each page
+  background-color: $color3;
+  // Set div display value to flex
+  display: flex;
+  flex-direction: column;
+
+  // With formatting, places name and links at opposite ends of the header
+  justify-content: space-between;
+  // Formats margin to match edges with header
+  margin: 0 2%;
+
+  // Formatting for index page container
+  border: $divBorder;
+  color: $color2;
+  img {
+    border: $divBorder;
+  }
+// Styling of home page quote
+  #quote {
+    max-width: 600px;
+    font-size: $quoteFontSize;
+    font-family:  courgette, cursive;
+    font-weight: 700;
+    padding: 4% 15%;
+    text-align: justify;
+    border-left: none;
+    p {
+      font-size: 1rem;
+      text-align: right;
+    }
+  }
+  // styling of home bio with display flex
+  #bio {
+    display: flex;
+    border-right: none;
+    padding-bottom: 100px;
+    overflow: hidden;
+// changing font of bio paragraph and setting max width of container
+    p {
+      font-family: EB garamond, sans-serif;
+      max-width: 540px;
+      
+      #hello{
+        font-size: 1.68em;
+      }
+      // Sets text to jusity aligment and adds margins to the sides
+      width: 800px;
+      text-align: justify;
+      margin-left: 10%;
+      margin-right: 10%;
+      font-size: 1.5em;
+    }
+    // adding styling to figure tag
+    figure {
+      width: 20%;
+      height: 10%;
+      margin-right: 25px;
+      margin-bottom: 4%;
+    }
+  }
+  // styling of divs on about page
+  #drum, #ultimate, #yoga {
+    display: flex;
+    // image size styling
+    img {
+      width: 20%;
+      height: 10%;
+      margin: 2%;
+    }
+    h2, p {
+      margin: 2% 2% -1%;
+    }
+  }
+  // adjusting max height of yoga pic 
+  #yogaPic {
+    max-height: 250px;
+  }
+  // adjusting drum and yoga headings spacing
+  #drumHeading, #yogaHeading {
+    margin-left: 2%;
+    margin-bottom: -1%;
+    margin-top: 2%;
+    
+  }
+  // changing styling of hr tags
+  hr {
+    border: .5px solid $color2;
+  }
+  .hrMargin {
+    margin: 0 2%;
+  }
+}
+// styling for about page border
+#aboutContainer {
+  border: 68px solid $color2;
+  border-top-width: 50px;
+  border-bottom-width: 150px;
+  font-family: EB garamond, sans-serif;
+  font-size: larger;
+}
+// styling for header on about page
+#aboutHeading {
+  background-color: #582817;
+  color: #e4d9c3;
+  text-align: center;
+  font-size: 1.5*$quoteFontSize;
+  margin: 0;
+  padding: 50px;
+  font-family: EB garamond, sans-serif;
+
+}
+// styling for portfolio page
+.containerPort {
+  // Basic formatting for all container divs on each page
+  background-color: $color3;
+  // Set div display value to flex
+  display: flex;
+  // With formatting, places name and links at opposite ends of the header
+  justify-content: space-between;
+  margin: 0 2%;
+  color: $color2;
+  font-family: EB garamond, sans-serif;
+// styling of portfolio page images and each portfolio div container
+  img {
+    border: $divBorder;
+    margin-top: 10%;
+    width: 250px;
+    height: 200px;
+  }
+  div {
+    border: $divBorder;
+    border-width: .5px;
+  }
+  // loop to add padding and overflow auto property to each individual portfolio page
+  @for $i from 1 through 6 {
+    #portfolio-#{$i} {
+      padding: 2%;
+      overflow: auto;
+    }
+  }
+  // bottom border added to underline portfolio headers
+  h2 {
+    max-width: fit-content;
+    border-bottom: $divBorder;
+  }
+}
