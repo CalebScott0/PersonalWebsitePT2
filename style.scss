@@ -4,7 +4,6 @@ $border: 1px solid black;
 $color1: #d8bd8a;
 $color2: #582817;
 $color3: #e4d9c3;
-$color4: #AA5042;
 $quoteFontSize: 2.5rem;
 
 // importing fonts from fonts.google.com
@@ -71,6 +70,7 @@ a:hover {
   header {
     grid-area: header;
     color: $color3;
+    box-sizing: border-box;
   }
 
   .index-quote {
@@ -80,6 +80,7 @@ a:hover {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    box-sizing: border-box;
     q {
       font-size: 3rem;
     }
@@ -89,13 +90,17 @@ a:hover {
   }
 
   .index-bio {
+    box-sizing: border-box;
     grid-area: index-bio;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-bottom: 4em solid $color2;
   }
 
   .index-image {
+    box-sizing: border-box;
+    border-bottom: 4em solid $color2;
     grid-area: index-image;
     img {
       // make image fit container and avoids losing it when window shrinks

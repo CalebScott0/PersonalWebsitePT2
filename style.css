@@ -60,6 +60,7 @@ a:hover {
 .index-container header {
   grid-area: header;
   color: #e4d9c3;
+  box-sizing: border-box;
 }
 .index-container .index-quote {
   grid-area: index-quote;
@@ -67,6 +68,7 @@ a:hover {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  box-sizing: border-box;
 }
 .index-container .index-quote q {
   font-size: 3rem;
@@ -75,12 +77,16 @@ a:hover {
   font-size: 1rem;
 }
 .index-container .index-bio {
+  box-sizing: border-box;
   grid-area: index-bio;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-bottom: 4em solid #582817;
 }
 .index-container .index-image {
+  box-sizing: border-box;
+  border-bottom: 4em solid #582817;
   grid-area: index-image;
 }
 .index-container .index-image img {
