@@ -4,7 +4,7 @@ $border: 1px solid black;
 $color1: #d8bd8a;
 $color2: #582817;
 $color3: #e4d9c3;
-
+$color4: #AA5042;
 $quoteFontSize: 2.5rem;
 
 // importing fonts from fonts.google.com
@@ -15,9 +15,17 @@ body {
   // // min-height: 100vh;
   // max-width: 100%;
 }
-header,
+header {
+  background-color: $color2;
+  box-sizing: border-box;
+  border: $border;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // margin: 2em;
+}
 footer {
-  background-color: #582817;
+  background-color: $color3;
   box-sizing: border-box;
   border: $border;
   display: flex;
@@ -50,7 +58,7 @@ a:hover {
   box-sizing: border-box;
   min-height: 100vh;
   border: $border;
-  background-color: #e4d9c3;
+  background-color: $color3;
   margin: 2em;
   display: grid;
   grid-template-columns: 25% 1fr 1fr;
@@ -62,7 +70,7 @@ a:hover {
     "footer footer footer";
   header {
     grid-area: header;
-    color: #e4d9c3;
+    color: $color3;
   }
 
   .index-quote {
@@ -99,6 +107,7 @@ a:hover {
 
   footer {
     grid-area: footer;
+    color: $color2;
   }
 }
 

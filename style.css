@@ -3,9 +3,17 @@ body {
   background-color: #d8bd8a;
 }
 
-header,
-footer {
+header {
   background-color: #582817;
+  box-sizing: border-box;
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer {
+  background-color: #e4d9c3;
   box-sizing: border-box;
   border: 1px solid black;
   display: flex;
@@ -82,6 +90,7 @@ a:hover {
 }
 .index-container footer {
   grid-area: footer;
+  color: #582817;
 }
 
 .about {
