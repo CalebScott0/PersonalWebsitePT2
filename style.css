@@ -1,3 +1,29 @@
-.container {
-  display: flex;
+@import url("https://fonts.googleapis.com/css2?family=Courgette&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap");
+body {
+  min-height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 25% 1fr 1fr;
+  grid-template-rows: 10% 1fr 1fr 10%;
+  grid-template-areas: "header header header" "index-quote index-quote index-quote" "index-image index-bio index-bio" "footer footer footer";
+}
+
+header {
+  grid-area: header;
+}
+
+.index-quote {
+  grid-area: index-quote;
+}
+
+.index-bio {
+  grid-area: index-bio;
+}
+
+.index-image {
+  grid-area: index-image;
+}
+
+footer {
+  grid-area: footer;
 }/*# sourceMappingURL=style.css.map */
