@@ -1,196 +1,38 @@
 @import url("https://fonts.googleapis.com/css2?family=Courgette&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap");
 body {
-  background-color: #d8bd8a;
+  min-height: 100vh;
+  width: 100%;
+  
 }
 
-nav {
-  background-color: #582817;
-  border: 1px solid black;
-  margin: 0 2%;
-  padding: 1.618% 4%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: antiquewhite;
-  font-family: EB garamond, sans-serif;
-  font-weight: bold;
+.index {
+  display: grid;
+  grid-template-columns: 25% 1fr 1fr;
+  grid-template-rows: 10% 30% 1fr 10%;
+  grid-template-areas: "header header header" 
+  "index-quote index-quote index-quote" 
+  "index-image index-bio index-bio" 
+  "footer footer footer";
+header {
+  grid-area: header;
 }
-nav .name {
-  font-size: x-large;
-  margin-left: 10px;
-}
-nav .webPages {
-  font-size: 150%;
-  margin-right: 2%;
-}
-nav .webPages a {
-  color: antiquewhite;
-  text-decoration: none;
-  margin-right: 20px;
-}
-nav .webPages a:hover {
-  color: #d8bd8a;
+.index-quote {
+  grid-area: index-quote;
 }
 
-#aboutNav {
-  background-color: #e4d9c3;
-  border: 1px solid black;
-}
-#aboutNav .name {
-  color: #582817;
-  font-size: x-large;
-  margin-left: 10px;
-}
-#aboutNav .webPages {
-  font-size: 150%;
-  margin-right: 2%;
-}
-#aboutNav .webPages a {
-  color: #582817;
-  text-decoration: none;
-  margin-right: 20px;
-}
-#aboutNav .webPages a:hover {
-  color: #d8bd8a;
+.index-bio {
+  grid-area: index-bio;
 }
 
-.container {
-  background-color: #e4d9c3;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin: 0 2%;
-  border: 1px solid black;
-  color: #582817;
-}
-.container img {
-  border: 1px solid black;
-}
-.container #quote {
-  max-width: 600px;
-  font-size: 2.5rem;
-  font-family: courgette, cursive;
-  font-weight: 700;
-  padding: 4% 15%;
-  text-align: justify;
-  border-left: none;
-}
-.container #quote p {
-  font-size: 1rem;
-  text-align: right;
-}
-.container #bio {
-  display: flex;
-  border-right: none;
-  padding-bottom: 100px;
-  overflow: hidden;
-}
-.container #bio p {
-  font-family: EB garamond, sans-serif;
-  max-width: 540px;
-  width: 800px;
-  text-align: justify;
-  margin-left: 10%;
-  margin-right: 10%;
-  font-size: 1.5em;
-}
-.container #bio p #hello {
-  font-size: 1.68em;
-}
-.container #bio figure {
-  width: 20%;
-  height: 10%;
-  margin-right: 25px;
-  margin-bottom: 4%;
-}
-.container #drum, .container #ultimate, .container #yoga {
-  display: flex;
-}
-.container #drum img, .container #ultimate img, .container #yoga img {
-  width: 20%;
-  height: 10%;
-  margin: 2%;
-}
-.container #drum h2, .container #drum p, .container #ultimate h2, .container #ultimate p, .container #yoga h2, .container #yoga p {
-  margin: 2% 2% -1%;
-}
-.container #yogaPic {
-  max-height: 250px;
-}
-.container #drumHeading, .container #yogaHeading {
-  margin-left: 2%;
-  margin-bottom: -1%;
-  margin-top: 2%;
-}
-.container hr {
-  border: 0.5px solid #582817;
-}
-.container .hrMargin {
-  margin: 0 2%;
+.index-image {
+  grid-area: index-image;
 }
 
-#aboutContainer {
-  border: 68px solid #582817;
-  border-top-width: 50px;
-  border-bottom-width: 150px;
-  font-family: EB garamond, sans-serif;
-  font-size: larger;
+footer {
+  grid-area: footer;
 }
+}
+/*# s
 
-#aboutHeading {
-  background-color: #582817;
-  color: #e4d9c3;
-  text-align: center;
-  font-size: 3.75rem;
-  margin: 0;
-  padding: 50px;
-  font-family: EB garamond, sans-serif;
-}
 
-.containerPort {
-  background-color: #e4d9c3;
-  display: flex;
-  justify-content: space-between;
-  margin: 0 2%;
-  color: #582817;
-  font-family: EB garamond, sans-serif;
-}
-.containerPort img {
-  border: 1px solid black;
-  margin-top: 10%;
-  width: 250px;
-  height: 200px;
-}
-.containerPort div {
-  border: 1px solid black;
-  border-width: 0.5px;
-}
-.containerPort #portfolio-1 {
-  padding: 2%;
-  overflow: auto;
-}
-.containerPort #portfolio-2 {
-  padding: 2%;
-  overflow: auto;
-}
-.containerPort #portfolio-3 {
-  padding: 2%;
-  overflow: auto;
-}
-.containerPort #portfolio-4 {
-  padding: 2%;
-  overflow: auto;
-}
-.containerPort #portfolio-5 {
-  padding: 2%;
-  overflow: auto;
-}
-.containerPort #portfolio-6 {
-  padding: 2%;
-  overflow: auto;
-}
-.containerPort h2 {
-  max-width: -moz-fit-content;
-  max-width: fit-content;
-  border-bottom: 1px solid black;
-}/*# sourceMappingURL=style.css.map */
+ourceMappingURL=style.css.map */

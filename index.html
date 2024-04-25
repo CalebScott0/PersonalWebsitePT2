@@ -7,35 +7,38 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- outer container to use background color behind page -->
+  <!-- <div class="outer-container"> -->
+    <div class="index">
     <header>
-      <nav>
-        <div class="name">Caleb Scott</div>
-        <div class="webPages">
-          <a href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="portfolio.html">Portfolio</a>
-        </div>
-      </nav>
+        <span class="name">Caleb Scott</span>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+          </ul>
+        </nav>
     </header>
-    <main>
-      <div class="container">
-        <div id="quote">
+    <!-- <main> -->
+      <section class ="index-quote">
           <q>
             Once in a while you get shown the light. In the strangest of places
             if you look at it right.
           </q>
           <p>- Robert Hunter & Jerry Garcia</p>
-        </div>
-        <div id="bio">
+      </section>
           <!-- UPDATE THIS PICTURE -->
-
-          <p>
+        <section class="index-bio">
+          <p>   
             <span id="hello">Hello!</span>
             <br /><br />
             Welcome to the start of my journey as a developer.<br />Within this
             project I have pieced together what coding wisdom I have gathered
             over the past 3 weeks.
           </p>
+        </section>
+        <section class="index-image">
           <!-- added figure tag to move caption under image -->
           <figure>
             <img
@@ -44,20 +47,21 @@
             />
             <figcaption>circa 2018</figcaption>
           </figure>
-        </div>
-      </div>
-    </main>
-    <script src="script.js"></script>
+        </section>
+    <!-- </main> -->
+   
     <!-- Adding footer nav to mirror header -->
     <footer>
-      <nav>
-        <div class="name">Caleb Scott</div>
-        <div class="webPages">
-          <a href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a ref="portfolio.html">Portfolio</a>
-        </div>
-      </nav>
+        <span class="name">Caleb Scott</span>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+          </ul>
+        </nav>
     </footer>
+  </div>
+  <script src="script.js"></script>
   </body>
 </html>
