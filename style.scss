@@ -2,21 +2,20 @@
 $border: 1px solid black;
 // Color scheme variables
 $color1: #d8bd8a;
-$color2: #582817;
+$color2: #270c01;
 $color3: #e4d9c3;
-$color4: #AA5042;
 $quoteFontSize: 2.5rem;
 
 // importing fonts from fonts.google.com
 @import url("https://fonts.googleapis.com/css2?family=Courgette&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap");
 
 body {
-  background-color: $color1;
+  // background-color: $color1;
   // // min-height: 100vh;
   // max-width: 100%;
 }
 header {
-  background-color: $color2;
+  // background-color: $color2;
   box-sizing: border-box;
   border: $border;
   display: flex;
@@ -25,7 +24,7 @@ header {
   // margin: 2em;
 }
 footer {
-  background-color: $color3;
+  // background-color: $color3;
   box-sizing: border-box;
   border: $border;
   display: flex;
@@ -45,11 +44,12 @@ ul {
 li {
   list-style-type: none;
   display: inline;
-  margin: 0 .5em;
+  margin: 0 0.5em;
 }
 
 a {
   text-decoration: none;
+  // color:$color3
 }
 a:hover {
   text-decoration: underline;
@@ -58,11 +58,11 @@ a:hover {
   box-sizing: border-box;
   min-height: 100vh;
   border: $border;
-  background-color: $color3;
-  margin: 2em;
+  // background-color: $color3;
+  margin: 1em;
   display: grid;
   grid-template-columns: 25% 1fr 1fr;
-  grid-template-rows: 3em 1fr 1fr 3em;
+  grid-template-rows: 3.5em 1fr 1fr 3.5em;
   grid-template-areas:
     "header header header"
     ". index-quote ."
@@ -70,7 +70,8 @@ a:hover {
     "footer footer footer";
   header {
     grid-area: header;
-    color: $color3;
+    // color: $color3;
+    box-sizing: border-box;
   }
 
   .index-quote {
@@ -80,6 +81,8 @@ a:hover {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    box-sizing: border-box;
+    // color: $color2;
     q {
       font-size: 3rem;
     }
@@ -89,13 +92,24 @@ a:hover {
   }
 
   .index-bio {
+    box-sizing: border-box;
     grid-area: index-bio;
     display: flex;
     align-items: center;
     justify-content: center;
+    // border: 6em solid $color2;
+    border-top-width: 4em;
+    border-bottom-width: 4em;
+    border-left: none;
+    // color: $color2;
   }
 
   .index-image {
+    box-sizing: border-box;
+    // border: 6em solid $color2;
+    border-top-width: 4em;
+    border-bottom-width: 4em;
+    border-right: none;
     grid-area: index-image;
     img {
       // make image fit container and avoids losing it when window shrinks
@@ -107,7 +121,10 @@ a:hover {
 
   footer {
     grid-area: footer;
-    color: $color2;
+    // color: $color2;
+    a {
+      // color: $color2;
+    }
   }
 }
 
@@ -116,34 +133,31 @@ a:hover {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 5% 10% 1fr 1fr 1fr 10% 5%;
-  grid-template-areas: "header"
-  "about-heading"
-  "about-drum"
-  "about-ultimate"
-  "about-yoga"
-  "blank"
-  "footer";
+  grid-template-areas:
+    "header"
+    "about-heading"
+    "about-drum"
+    "about-ultimate"
+    "about-yoga"
+    "blank"
+    "footer";
   header {
     grid-area: header;
   }
-  .about-heading{
-    grid-area:about-heading;
-
+  .about-heading {
+    grid-area: about-heading;
   }
-  .about-drum{
-    grid-area:about-drum;
-
+  .about-drum {
+    grid-area: about-drum;
   }
- 
-  .about-ultimate{
-    grid-area:about-ultimate;
 
+  .about-ultimate {
+    grid-area: about-ultimate;
   }
-  .about-yoga{
-    grid-area:about-yoga;
-
+  .about-yoga {
+    grid-area: about-yoga;
   }
-  .blank{
+  .blank {
     grid-area: blank;
   }
 }
