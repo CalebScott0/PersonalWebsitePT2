@@ -1,5 +1,5 @@
 // Universal border variable
-$divBorder: 1px solid black;
+$border: 1px solid black;
 // Color scheme variables
 $color1: #d8bd8a;
 $color2: #582817;
@@ -11,35 +11,92 @@ $quoteFontSize: 2.5rem;
 @import url("https://fonts.googleapis.com/css2?family=Courgette&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap");
 
 body {
-  // background-color: $color1;
-  min-height: 100vh;
-  width: 100%;
+  background-color: $color1;
+  // // min-height: 100vh;
+  // max-width: 100%;
+}
+header,
+footer {
+  background-color: #582817;
+  box-sizing: border-box;
+  border: $border;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // margin: 2em;
+}
+nav {
+  height: 100%;
+}
+ul {
+  margin: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+li {
+  list-style-type: none;
+  display: inline;
+  margin: 0 .5em;
 }
 
-.index-container{
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+.index-container {
+  box-sizing: border-box;
+  min-height: 100vh;
+  border: $border;
+  background-color: #e4d9c3;
+  margin: 2em;
   display: grid;
   grid-template-columns: 25% 1fr 1fr;
-  grid-template-rows: 10% 1fr 1fr 10%;
-  grid-template-areas: "header header header"
-  "index-quote index-quote index-quote"
-  "index-image index-bio index-bio"
-  "footer footer footer";
+  grid-template-rows: 3em 1fr 1fr 3em;
+  grid-template-areas:
+    "header header header"
+    ". index-quote ."
+    "index-image index-bio index-bio"
+    "footer footer footer";
   header {
     grid-area: header;
+    color: #e4d9c3;
   }
-  
+
   .index-quote {
     grid-area: index-quote;
+    display: flex;
+    // pushes quote citation below quote
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    q {
+      font-size: 3rem;
+    }
+    p {
+      font-size: 1rem;
+    }
   }
-  
+
   .index-bio {
     grid-area: index-bio;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-  
+
   .index-image {
     grid-area: index-image;
+    img {
+      // make image fit container and avoids losing it when window shrinks
+      box-sizing: border-box;
+      border: $border;
+      width: 100%;
+    }
   }
-  
+
   footer {
     grid-area: footer;
   }
