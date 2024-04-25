@@ -12,14 +12,16 @@ $quoteFontSize: 2.5rem;
 
 body {
   // background-color: $color1;
-  min-height: 100vh;
+  // min-height: 100vh;
   width: 100%;
 }
 
+
 .index{
+  height: 100vh;
   display: grid;
   grid-template-columns: 25% 1fr 1fr;
-  grid-template-rows: 10% 1fr 1fr 10%;
+  grid-template-rows: 5% 1fr 1fr 5%;
   grid-template-areas: "header header header"
   "index-quote index-quote index-quote"
   "index-image index-bio index-bio"
@@ -42,5 +44,42 @@ body {
   
   footer {
     grid-area: footer;
+  }
+}
+
+.about {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 5% 10% 1fr 1fr 1fr 10% 5%;
+  grid-template-areas: "header"
+  "about-heading"
+  "about-drum"
+  "about-ultimate"
+  "about-yoga"
+  "blank"
+  "footer";
+  header {
+    grid-area: header;
+  }
+  .about-heading{
+    grid-area:about-heading;
+
+  }
+  .about-drum{
+    grid-area:about-drum;
+
+  }
+ 
+  .about-ultimate{
+    grid-area:about-ultimate;
+
+  }
+  .about-yoga{
+    grid-area:about-yoga;
+
+  }
+  .blank{
+    grid-area: blank;
   }
 }

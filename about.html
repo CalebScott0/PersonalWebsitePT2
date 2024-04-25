@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="about">
     <header>
       <span class="name">Caleb Scott</span>
       <nav>
@@ -18,14 +19,13 @@
         </ul>
       </nav>
     </header>
-    <main>
-      <!-- Using div class container for basic page styling -->
-      <div class="container">
+      <section class = about-heading>
         <h2 id =aboutHeading>Outside of school and work this is who I am!</h2>
+        </section>
+
         <!-- new div container to add border around main content -->
-        <div id="aboutContainer">
-          <h2 id="drumHeading">Lorem Ipsum</h2>
-          <div id="drum">
+        <div class = "about-drum">
+          <h2>Lorem Ipsum</h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -35,22 +35,21 @@
               nulla pariatur. Excepteur sint occaecat cupidatat non proident,
               sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
-            <hr />
-            <img
-              id="drumPic"
-src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT--o8jtDHA8MK3HIshgz3T68pPzK1B4abQHQ&usqp=CAU" alt="A Hand Drum"
+        </div>
+        <!-- <div class="about-drum-image"> -->
+          <img
+            src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT--o8jtDHA8MK3HIshgz3T68pPzK1B4abQHQ&usqp=CAU" alt="A Hand Drum"
             />
-          </div>
-          <div class="hrMargin"><hr /></div>
-          <div id="ultimate">
+          <!-- </div> -->
+          <!-- <div class="about-ultimate-image"> -->           
+             <div class="about-ultimate">
+
             <img
-              id="ultimatePic"
               src="https://spunout.ie/wp-content/uploads/2023/09/ultimate_frisbee-955x630.jpg"
               alt="People playing ultimate frisbee."
             />
-            <hr />
-            <section>
-              <h2 id="ultimateHeading">Lorem Ipsum</h2>
+          <!-- </div> -->
+              <h2>Lorem Ipsum</h2>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -60,11 +59,9 @@ src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT--o8jtDHA8MK3HIshg
                 nulla pariatur. Excepteur sint occaecat cupidatat non proident,
                 sunt in culpa qui officia deserunt mollit anim id est laborum.
               </p>
-            </section>
-          </div>
-          <div class="hrMargin"><hr /></div>
-          <h2 id="yogaHeading">Lorem Ipsum</h2>
-          <div id="yoga">
+           </div>
+          <div class="about-yoga">
+          <h2>Lorem Ipsum</h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -74,17 +71,13 @@ src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT--o8jtDHA8MK3HIshg
               nulla pariatur. Excepteur sint occaecat cupidatat non proident,
               sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
-            <hr />
             <img
               id="yogaPic"
               src="https://thumbs.dreamstime.com/b/silhouetted-asian-man-acts-yoga-26494735.jpg"
               alt="Silhouette of a yogi in tree pose."
             />
           </div>
-        </div>
-      </div>
-    </main>
-    <script src="script.js"></script>
+          <div class="blank"></div>
     <footer>
       <!-- Adding footer nav to mirror header -->
       <span class="name">Caleb Scott</span>
@@ -95,9 +88,8 @@ src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT--o8jtDHA8MK3HIshg
           <li><a href="portfolio.html">Portfolio</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
-      </nav>
-        </div>
-      </nav>
     </footer>
+    </div>
+    <script src="script.js"></script>
   </body>
 </html>
