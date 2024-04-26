@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Courgette&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap");
+body {
+  min-height: 100vh;
+  width: 100%;
+}
+
 header {
   box-sizing: border-box;
   border: 1px solid black;
@@ -93,28 +98,68 @@ a:hover {
 .index-container footer {
   grid-area: footer;
 }
-.about {
-  height: 100vh;
+
+.about-container {
+  border: 1px solid black;
+  border-bottom: none;
+  margin: 1em;
   display: grid;
+  gap: 2em;
   grid-template-columns: 1fr;
-  grid-template-rows: 5% 10% 1fr 1fr 1fr 10% 5%;
-  grid-template-areas: "header" "about-heading" "about-drum" "about-ultimate" "about-yoga" "blank" "footer";
+  grid-template-rows: 5% 15% repeat(3, 1fr) 5%;
+  grid-template-areas: "header" "about-heading" "about-drum" "about-ultimate" "about-yoga" "footer";
 }
-.about header {
+.about-container header {
   grid-area: header;
 }
-.about .about-heading {
+.about-container img {
+  max-width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 0.5em;
+}
+.about-container section {
+  margin: 1em;
+}
+.about-container .about-heading {
   grid-area: about-heading;
+  box-sizing: border-box;
+  border: 1px solid black;
+  margin: 2em;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 }
-.about .about-drum {
+.about-container .about-drum {
   grid-area: about-drum;
+  border: 1px solid black;
+  display: flex;
+  box-sizing: border-box;
+  margin: 1em 2em;
 }
-.about .about-ultimate {
+.about-container .about-ultimate {
   grid-area: about-ultimate;
+  border: 1px solid black;
+  display: flex;
+  box-sizing: border-box;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 1em 2em;
 }
-.about .about-yoga {
+.about-container .about-ultimate img {
+  max-width: 300px;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.about-container .about-yoga {
   grid-area: about-yoga;
+  border: 1px solid black;
+  display: flex;
+  box-sizing: border-box;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 1em 2em;
 }
-.about .blank {
-  grid-area: blank;
+.about-container footer {
+  grid-area: footer;
 }/*# sourceMappingURL=style.css.map */
