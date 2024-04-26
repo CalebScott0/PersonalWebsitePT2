@@ -1,10 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Courgette&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap");
+html {
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
 body {
-  min-height: 100vh;
-  width: 100%;
+  background-color: #d8bd8a;
+  height: 100%;
+  margin: 0;
 }
 
 header {
+  grid-area: header;
+  background-color: #270c01;
   box-sizing: border-box;
   border: 1px solid black;
   display: flex;
@@ -12,12 +20,21 @@ header {
   align-items: center;
 }
 
+.name {
+  margin-left: 2em;
+}
+
 footer {
+  background-color: #e4d9c3;
   box-sizing: border-box;
   border: 1px solid black;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: #270c01;
+}
+footer a {
+  color: #270c01;
 }
 
 nav {
@@ -29,6 +46,7 @@ ul {
   height: 100%;
   display: flex;
   align-items: center;
+  margin-right: 1.5em;
 }
 
 li {
@@ -39,6 +57,7 @@ li {
 
 a {
   text-decoration: none;
+  color: #e4d9c3;
 }
 
 a:hover {
@@ -47,8 +66,9 @@ a:hover {
 
 .index-container {
   box-sizing: border-box;
-  min-height: 100vh;
+  height: 100%;
   border: 1px solid black;
+  background-color: #e4d9c3;
   margin: 1em;
   display: grid;
   grid-template-columns: 25% 1fr 1fr;
@@ -56,8 +76,11 @@ a:hover {
   grid-template-areas: "header header header" ". index-quote ." "index-image index-bio index-bio" "footer footer footer";
 }
 .index-container header {
-  grid-area: header;
+  color: #e4d9c3;
   box-sizing: border-box;
+  border-top: none;
+  border-left: none;
+  border-right: none;
 }
 .index-container .index-quote {
   grid-area: index-quote;
@@ -97,20 +120,24 @@ a:hover {
 }
 .index-container footer {
   grid-area: footer;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
 }
 
 .about-container {
-  border: 1px solid black;
+  height: 100%;
+  border: 0.5px solid black;
   border-bottom: none;
-  margin: 1em;
+  margin: 1em 1em 2em 1em;
   display: grid;
   gap: 2em;
   grid-template-columns: 1fr;
   grid-template-rows: 5% 15% repeat(3, 1fr) 5%;
   grid-template-areas: "header" "about-heading" "about-drum" "about-ultimate" "about-yoga" "footer";
 }
-.about-container header {
-  grid-area: header;
+.about-container .name {
+  color: #e4d9c3;
 }
 .about-container img {
   max-width: 100%;
@@ -122,6 +149,7 @@ a:hover {
   margin: 1em;
 }
 .about-container .about-heading {
+  background-color: #e4d9c3;
   grid-area: about-heading;
   box-sizing: border-box;
   border: 1px solid black;
@@ -131,6 +159,7 @@ a:hover {
   justify-content: center;
 }
 .about-container .about-drum {
+  background-color: #e4d9c3;
   grid-area: about-drum;
   border: 1px solid black;
   display: flex;
@@ -138,6 +167,7 @@ a:hover {
   margin: 1em 2em;
 }
 .about-container .about-ultimate {
+  background-color: #e4d9c3;
   grid-area: about-ultimate;
   border: 1px solid black;
   display: flex;
@@ -152,6 +182,7 @@ a:hover {
   height: fit-content;
 }
 .about-container .about-yoga {
+  background-color: #e4d9c3;
   grid-area: about-yoga;
   border: 1px solid black;
   display: flex;
@@ -162,4 +193,10 @@ a:hover {
 }
 .about-container footer {
   grid-area: footer;
+}
+.about-container footer .name {
+  color: #270c01;
+}
+.about-container footer a {
+  color: #270c01;
 }/*# sourceMappingURL=style.css.map */
