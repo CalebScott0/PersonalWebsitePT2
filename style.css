@@ -210,7 +210,7 @@ hr {
   color: #270c01;
 }
 
-.containerPort {
+.container-portfolio {
   height: 100%;
   margin: 1em;
   border: 0.5px solid black;
@@ -223,62 +223,62 @@ hr {
   grid-template-areas: "header header header" "portfolio-1 portfolio-2 portfolio-3" "portfolio-4 portfolio-5 portfolio-6" "footer footer footer";
   justify-content: space-between;
 }
-.containerPort header {
+.container-portfolio header {
   color: #e4d9c3;
 }
-.containerPort img {
+.container-portfolio img {
   border: 1px solid black;
   margin-top: 10%;
   width: 250px;
   height: 200px;
 }
-.containerPort div {
+.container-portfolio div {
   border: 1px solid black;
   border-width: 0.5px;
 }
-.containerPort #portfolio-1 {
+.container-portfolio #portfolio-1 {
   padding: 2%;
   grid-area: portfolio-1;
   margin: 1em 2em;
   color: #e4d9c3;
   background-color: #270c01;
 }
-.containerPort #portfolio-2 {
+.container-portfolio #portfolio-2 {
   padding: 2%;
   grid-area: portfolio-2;
   margin: 1em 2em;
   color: #e4d9c3;
   background-color: #270c01;
 }
-.containerPort #portfolio-3 {
+.container-portfolio #portfolio-3 {
   padding: 2%;
   grid-area: portfolio-3;
   margin: 1em 2em;
   color: #e4d9c3;
   background-color: #270c01;
 }
-.containerPort #portfolio-4 {
+.container-portfolio #portfolio-4 {
   padding: 2%;
   grid-area: portfolio-4;
   margin: 1em 2em;
   color: #e4d9c3;
   background-color: #270c01;
 }
-.containerPort #portfolio-5 {
+.container-portfolio #portfolio-5 {
   padding: 2%;
   grid-area: portfolio-5;
   margin: 1em 2em;
   color: #e4d9c3;
   background-color: #270c01;
 }
-.containerPort #portfolio-6 {
+.container-portfolio #portfolio-6 {
   padding: 2%;
   grid-area: portfolio-6;
   margin: 1em 2em;
   color: #e4d9c3;
   background-color: #270c01;
 }
-.containerPort h2 {
+.container-portfolio h2 {
   max-width: -moz-fit-content;
   max-width: fit-content;
   border-bottom: 1px solid black;
