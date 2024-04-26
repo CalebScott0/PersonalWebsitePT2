@@ -1,6 +1,6 @@
 // Universal border variable
 $border: 1px solid black;
-$border2: .5px solid black;
+$border2: 0.5px solid black;
 // Color scheme variables
 $color1: #d8bd8a;
 $color2: #270c01;
@@ -19,9 +19,8 @@ body {
   // width: 100%;
   height: 100%;
   margin: 0;
- }
+}
 header {
-  grid-area: header;
   background-color: $color2;
   box-sizing: border-box;
   border: $border;
@@ -30,7 +29,7 @@ header {
   align-items: center;
   // margin: 2em;
 }
-.name{
+.name {
   margin-left: 2em;
 }
 footer {
@@ -63,10 +62,13 @@ li {
 
 a {
   text-decoration: none;
-  color:$color3
+  color: $color3;
 }
 a:hover {
   text-decoration: underline;
+}
+hr {
+  border-color: $color2;
 }
 .index-container {
   box-sizing: border-box;
@@ -83,6 +85,7 @@ a:hover {
     "index-image index-bio index-bio"
     "footer footer footer";
   header {
+    grid-area: header;
     color: $color3;
     box-sizing: border-box;
     border-top: none;
@@ -149,50 +152,63 @@ a:hover {
 
 .about-container {
   height: 100%;
+  background-color: $color2;
   border: $border2;
   border-bottom: none;
   margin: 1em 1em 2em 1em;
   display: grid;
   gap: 2em;
   grid-template-columns: 1fr;
-  grid-template-rows: 5% 15% repeat(3, 1fr) 5%;
-  grid-template-areas:
-    "header"
-    "about-heading"
-    "about-drum"
-    "about-ultimate"
-    "about-yoga"
-    "footer";
+  grid-template-rows: 3.5em 15% repeat(3, 1fr) 3.5em;
+  grid-template-areas: "header"
+  "about-heading"
+  "about-drum"
+  "about-ultimate"
+  "about-yoga"
+  "footer"
+  ;
   .name {
-    color: $color3;
+    color: $color2;
+  }
+  a{
+    color: $color2;
   }
   img {
     // helps image fit in container
     max-width: 100%;
     height: fit-content;
-    margin: .5em;
-    
+    margin: 0.5em;
   }
-  section{
+  section {
     margin: 1em;
   }
+  header {
+    grid-area: header;
+    background-color:$color3;
+  }
   .about-heading {
-    background-color: $color3;
+    background-color: $color2;
+    color: $color3;
     grid-area: about-heading;
-    box-sizing: border-box;
-    border: $border;
-    margin: 2em;
+    // box-sizing: border-box;
+    // border: $border;
+    // margin: 2em;
     display: flex;
-    align-items:flex-end;
+    align-items: flex-end;
     justify-content: center;
   }
   .about-drum {
-    background-color: $color3;
     grid-area: about-drum;
-    border: $border;
-    display: flex;
+    background-color: $color3;
+    // grid-area: about-drum;
+    border: 10px solid $color3;
     box-sizing: border-box;
-    margin: 1em 2em;
+    margin: 1em 4em;
+  }
+  .inner-drum{
+    display: flex;
+    border: 20px solid $color2;
+
   }
 
   .about-ultimate {
@@ -202,7 +218,7 @@ a:hover {
     display: flex;
     box-sizing: border-box;
     height: fit-content;
-    margin: 1em 2em;
+    margin: 1em 4em;
     img {
       max-width: 300px;
       height: fit-content;
@@ -215,15 +231,60 @@ a:hover {
     display: flex;
     box-sizing: border-box;
     height: fit-content;
-    margin: 1em 2em;
+    margin: 1em 4em;
   }
-  footer{
+  footer {
     grid-area: footer;
-    .name{
+    .name {
       color: $color2;
     }
-    a{
+    a {
       color: $color2;
     }
+  }
+}
+
+.portfolio-header {
+  height: 3.5em;
+  margin: 1em 1em 0 1em;
+  color: $color3;
+}
+.portfolio-footer {
+  height: 3.5em;
+  margin: 0 1em 1em 1em;
+}
+.containerPort {
+  // Basic formatting for all container divs on each page
+  background-color: $color3;
+  // Set div display value to flex
+  display: flex;
+  // With formatting, places name and links at opposite ends of the header
+  justify-content: space-between;
+  margin: 0 1em;
+  color: $color2;
+  font-family: EB garamond, sans-serif;
+
+  // styling of portfolio page images and each portfolio div container
+  img {
+    border: $border;
+    margin-top: 10%;
+    width: 250px;
+    height: 200px;
+  }
+  div {
+    border: $border;
+    border-width: 0.5px;
+  }
+  // loop to add padding individual portfolio box
+  @for $i from 1 through 6 {
+    #portfolio-#{$i} {
+      padding: 2%;
+      // overflow: auto;
+    }
+  }
+  // bottom border added to underline portfolio headers
+  h2 {
+    max-width: fit-content;
+    border-bottom: $border;
   }
 }

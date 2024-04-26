@@ -11,7 +11,6 @@ body {
 }
 
 header {
-  grid-area: header;
   background-color: #270c01;
   box-sizing: border-box;
   border: 1px solid black;
@@ -64,6 +63,10 @@ a:hover {
   text-decoration: underline;
 }
 
+hr {
+  border-color: #270c01;
+}
+
 .index-container {
   box-sizing: border-box;
   height: 100%;
@@ -76,6 +79,7 @@ a:hover {
   grid-template-areas: "header header header" ". index-quote ." "index-image index-bio index-bio" "footer footer footer";
 }
 .index-container header {
+  grid-area: header;
   color: #e4d9c3;
   box-sizing: border-box;
   border-top: none;
@@ -127,17 +131,21 @@ a:hover {
 
 .about-container {
   height: 100%;
+  background-color: #270c01;
   border: 0.5px solid black;
   border-bottom: none;
   margin: 1em 1em 2em 1em;
   display: grid;
   gap: 2em;
   grid-template-columns: 1fr;
-  grid-template-rows: 5% 15% repeat(3, 1fr) 5%;
+  grid-template-rows: 3.5em 15% repeat(3, 1fr) 3.5em;
   grid-template-areas: "header" "about-heading" "about-drum" "about-ultimate" "about-yoga" "footer";
 }
 .about-container .name {
-  color: #e4d9c3;
+  color: #270c01;
+}
+.about-container a {
+  color: #270c01;
 }
 .about-container img {
   max-width: 100%;
@@ -148,23 +156,28 @@ a:hover {
 .about-container section {
   margin: 1em;
 }
-.about-container .about-heading {
+.about-container header {
+  grid-area: header;
   background-color: #e4d9c3;
+}
+.about-container .about-heading {
+  background-color: #270c01;
+  color: #e4d9c3;
   grid-area: about-heading;
-  box-sizing: border-box;
-  border: 1px solid black;
-  margin: 2em;
   display: flex;
   align-items: flex-end;
   justify-content: center;
 }
 .about-container .about-drum {
-  background-color: #e4d9c3;
   grid-area: about-drum;
-  border: 1px solid black;
-  display: flex;
+  background-color: #e4d9c3;
+  border: 10px solid #e4d9c3;
   box-sizing: border-box;
-  margin: 1em 2em;
+  margin: 1em 4em;
+}
+.about-container .inner-drum {
+  display: flex;
+  border: 20px solid #270c01;
 }
 .about-container .about-ultimate {
   background-color: #e4d9c3;
@@ -174,7 +187,7 @@ a:hover {
   box-sizing: border-box;
   height: -moz-fit-content;
   height: fit-content;
-  margin: 1em 2em;
+  margin: 1em 4em;
 }
 .about-container .about-ultimate img {
   max-width: 300px;
@@ -189,7 +202,7 @@ a:hover {
   box-sizing: border-box;
   height: -moz-fit-content;
   height: fit-content;
-  margin: 1em 2em;
+  margin: 1em 4em;
 }
 .about-container footer {
   grid-area: footer;
@@ -199,4 +212,57 @@ a:hover {
 }
 .about-container footer a {
   color: #270c01;
+}
+
+.portfolio-header {
+  height: 3.5em;
+  margin: 1em 1em 0 1em;
+  color: #e4d9c3;
+}
+
+.portfolio-footer {
+  height: 3.5em;
+  margin: 0 1em 1em 1em;
+}
+
+.containerPort {
+  background-color: #e4d9c3;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 1em;
+  color: #270c01;
+  font-family: EB garamond, sans-serif;
+}
+.containerPort img {
+  border: 1px solid black;
+  margin-top: 10%;
+  width: 250px;
+  height: 200px;
+}
+.containerPort div {
+  border: 1px solid black;
+  border-width: 0.5px;
+}
+.containerPort #portfolio-1 {
+  padding: 2%;
+}
+.containerPort #portfolio-2 {
+  padding: 2%;
+}
+.containerPort #portfolio-3 {
+  padding: 2%;
+}
+.containerPort #portfolio-4 {
+  padding: 2%;
+}
+.containerPort #portfolio-5 {
+  padding: 2%;
+}
+.containerPort #portfolio-6 {
+  padding: 2%;
+}
+.containerPort h2 {
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  border-bottom: 1px solid black;
 }/*# sourceMappingURL=style.css.map */
