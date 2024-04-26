@@ -27,6 +27,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  grid-area: header;
+
   // margin: 2em;
 }
 .name {
@@ -40,6 +42,7 @@ footer {
   justify-content: space-between;
   align-items: center;
   color: $color2;
+  grid-area: footer;
   a {
     color: $color2;
   }
@@ -85,7 +88,6 @@ hr {
     "index-image index-bio index-bio"
     "footer footer footer";
   header {
-    grid-area: header;
     color: $color3;
     box-sizing: border-box;
     border-top: none;
@@ -139,7 +141,6 @@ hr {
   }
 
   footer {
-    grid-area: footer;
     border-bottom: none;
     border-left: none;
     border-right: none;
@@ -160,17 +161,17 @@ hr {
   gap: 2em;
   grid-template-columns: 1fr;
   grid-template-rows: 3.5em 15% repeat(3, 1fr) 3.5em;
-  grid-template-areas: "header"
-  "about-heading"
-  "about-drum"
-  "about-ultimate"
-  "about-yoga"
-  "footer"
-  ;
+  grid-template-areas:
+    "header"
+    "about-heading"
+    "about-drum"
+    "about-ultimate"
+    "about-yoga"
+    "footer";
   .name {
     color: $color2;
   }
-  a{
+  a {
     color: $color2;
   }
   img {
@@ -183,8 +184,7 @@ hr {
     margin: 1em;
   }
   header {
-    grid-area: header;
-    background-color:$color3;
+    background-color: $color3;
   }
   .about-heading {
     background-color: $color2;
@@ -205,10 +205,9 @@ hr {
     box-sizing: border-box;
     margin: 1em 4em;
   }
-  .inner-drum{
+  .inner-drum {
     display: flex;
     border: 20px solid $color2;
-
   }
 
   .about-ultimate {
@@ -234,7 +233,6 @@ hr {
     margin: 1em 4em;
   }
   footer {
-    grid-area: footer;
     .name {
       color: $color2;
     }
@@ -244,26 +242,40 @@ hr {
   }
 }
 
-.portfolio-header {
-  height: 3.5em;
-  margin: 1em 1em 0 1em;
-  color: $color3;
-}
-.portfolio-footer {
-  height: 3.5em;
-  margin: 0 1em 1em 1em;
-}
+// .portfolio-header {
+//   height: 3.5em;
+//   margin: 1em 1em 0 1em;
+//   color: $color3;
+// }
+// .portfolio-footer {
+//   height: 3.5em;
+//   margin: 0 1em 1em 1em;
+// }
 .containerPort {
+  height: 100%;
+  margin: 1em;
+  border: $border2;
+  box-sizing: border-box;
   // Basic formatting for all container divs on each page
   background-color: $color3;
   // Set div display value to flex
-  display: flex;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 3.5em repeat(2, 1fr) 3.5em; 
+  grid-template-areas:
+  "header header header"
+    "portfolio-1 portfolio-2 portfolio-3"
+    "portfolio-4 portfolio-5 portfolio-6"
+    "footer footer footer";
   // With formatting, places name and links at opposite ends of the header
   justify-content: space-between;
-  margin: 0 1em;
-  color: $color2;
-  font-family: EB garamond, sans-serif;
-
+  // margin: 0 1em;
+  // color: $color2;
+  // font-family: EB garamond, sans-serif;
+header{
+  color:$color3;
+}
   // styling of portfolio page images and each portfolio div container
   img {
     border: $border;
@@ -279,6 +291,10 @@ hr {
   @for $i from 1 through 6 {
     #portfolio-#{$i} {
       padding: 2%;
+      grid-area: portfolio-#{$i};
+      margin: 1em 2em;
+      color: $color3;
+      background-color: $color2;
       // overflow: auto;
     }
   }

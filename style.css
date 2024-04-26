@@ -17,6 +17,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  grid-area: header;
 }
 
 .name {
@@ -31,6 +32,7 @@ footer {
   justify-content: space-between;
   align-items: center;
   color: #270c01;
+  grid-area: footer;
 }
 footer a {
   color: #270c01;
@@ -79,7 +81,6 @@ hr {
   grid-template-areas: "header header header" ". index-quote ." "index-image index-bio index-bio" "footer footer footer";
 }
 .index-container header {
-  grid-area: header;
   color: #e4d9c3;
   box-sizing: border-box;
   border-top: none;
@@ -123,7 +124,6 @@ hr {
   width: 100%;
 }
 .index-container footer {
-  grid-area: footer;
   border-bottom: none;
   border-left: none;
   border-right: none;
@@ -157,7 +157,6 @@ hr {
   margin: 1em;
 }
 .about-container header {
-  grid-area: header;
   background-color: #e4d9c3;
 }
 .about-container .about-heading {
@@ -204,9 +203,6 @@ hr {
   height: fit-content;
   margin: 1em 4em;
 }
-.about-container footer {
-  grid-area: footer;
-}
 .about-container footer .name {
   color: #270c01;
 }
@@ -214,24 +210,21 @@ hr {
   color: #270c01;
 }
 
-.portfolio-header {
-  height: 3.5em;
-  margin: 1em 1em 0 1em;
-  color: #e4d9c3;
-}
-
-.portfolio-footer {
-  height: 3.5em;
-  margin: 0 1em 1em 1em;
-}
-
 .containerPort {
+  height: 100%;
+  margin: 1em;
+  border: 0.5px solid black;
+  box-sizing: border-box;
   background-color: #e4d9c3;
-  display: flex;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 3.5em repeat(2, 1fr) 3.5em;
+  grid-template-areas: "header header header" "portfolio-1 portfolio-2 portfolio-3" "portfolio-4 portfolio-5 portfolio-6" "footer footer footer";
   justify-content: space-between;
-  margin: 0 1em;
-  color: #270c01;
-  font-family: EB garamond, sans-serif;
+}
+.containerPort header {
+  color: #e4d9c3;
 }
 .containerPort img {
   border: 1px solid black;
@@ -245,21 +238,45 @@ hr {
 }
 .containerPort #portfolio-1 {
   padding: 2%;
+  grid-area: portfolio-1;
+  margin: 1em 2em;
+  color: #e4d9c3;
+  background-color: #270c01;
 }
 .containerPort #portfolio-2 {
   padding: 2%;
+  grid-area: portfolio-2;
+  margin: 1em 2em;
+  color: #e4d9c3;
+  background-color: #270c01;
 }
 .containerPort #portfolio-3 {
   padding: 2%;
+  grid-area: portfolio-3;
+  margin: 1em 2em;
+  color: #e4d9c3;
+  background-color: #270c01;
 }
 .containerPort #portfolio-4 {
   padding: 2%;
+  grid-area: portfolio-4;
+  margin: 1em 2em;
+  color: #e4d9c3;
+  background-color: #270c01;
 }
 .containerPort #portfolio-5 {
   padding: 2%;
+  grid-area: portfolio-5;
+  margin: 1em 2em;
+  color: #e4d9c3;
+  background-color: #270c01;
 }
 .containerPort #portfolio-6 {
   padding: 2%;
+  grid-area: portfolio-6;
+  margin: 1em 2em;
+  color: #e4d9c3;
+  background-color: #270c01;
 }
 .containerPort h2 {
   max-width: -moz-fit-content;
