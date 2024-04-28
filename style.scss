@@ -11,7 +11,7 @@ $color3: #e4d9c3;
 @import url("https://fonts.googleapis.com/css2?family=Courgette&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap");
 
 html {
-  height: fit-content;
+  height: 100%;
 }
 body {
   background-color: $color1;
@@ -78,10 +78,10 @@ hr {
   height: 100%;
   border: $border;
   background-color: $color3;
-  margin: 1em;
+  margin: 2em 3em;
   display: grid;
   grid-template-columns: 25% 1fr 1fr;
-  grid-template-rows: 3.5em 1fr 1fr 3.5em;
+  grid-template-rows: 4em 1fr 1fr 4em;
   grid-template-areas:
     "header header header"
     ". index-quote ."
@@ -152,15 +152,15 @@ hr {
 }
 
 .about-container {
-  height: 100%;
+  height: fit-content;
   background-color: $color2;
   border: $border2;
   border-bottom: none;
-  margin: 1em 1em 2em 1em;
+  margin: 2em 3em 3em 3em;
   display: grid;
   gap: 2em;
   grid-template-columns: 1fr;
-  grid-template-rows: 3.5em 15% repeat(3, 1fr) 3.5em;
+  grid-template-rows: 4em 15% repeat(3, 1fr) 4em;
   grid-template-areas:
     "header"
     "about-heading"
@@ -252,8 +252,8 @@ hr {
 //   margin: 0 1em 1em 1em;
 // }
 .container-portfolio {
-  height: 100%;
-  margin: 1em;
+  height: fit-content;
+  margin: 2em 3em;
   border: $border2;
   box-sizing: border-box;
   // Basic formatting for all container divs on each page
@@ -262,7 +262,7 @@ hr {
   display: grid;
   gap: 10px;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 3.5em repeat(2, 1fr) 3.5em; 
+  grid-template-rows: 4em repeat(2, 1fr) 4em; 
   grid-template-areas:
   "header header header"
     "portfolio-1 portfolio-2 portfolio-3"
