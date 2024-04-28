@@ -1,6 +1,10 @@
 // Universal border variable
 $border: 1px solid black;
+// border for outer container
 $border2: 0.5px solid black;
+// outer border for about page portfolios
+$border3: 10px solid #e4d9c3;
+
 // Color scheme variables
 $color1: #d8bd8a;
 $color2: #270c01;
@@ -75,7 +79,7 @@ hr {
 }
 .index-container {
   box-sizing: border-box;
-  height: 100%;
+  height: calc(100% - 2em);
   border: $border;
   background-color: $color3;
   margin: 2em 3em;
@@ -89,7 +93,6 @@ hr {
     "footer footer footer";
   header {
     color: $color3;
-    box-sizing: border-box;
     border-top: none;
     border-left: none;
     border-right: none;
@@ -102,7 +105,6 @@ hr {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    box-sizing: border-box;
     // color: $color2;
     q {
       font-size: 3rem;
@@ -113,7 +115,6 @@ hr {
   }
 
   .index-bio {
-    box-sizing: border-box;
     grid-area: index-bio;
     display: flex;
     align-items: center;
@@ -126,11 +127,6 @@ hr {
   }
 
   .index-image {
-    box-sizing: border-box;
-    // border: 6em solid $color2;
-    border-top-width: 4em;
-    border-bottom-width: 4em;
-    border-right: none;
     grid-area: index-image;
     img {
       // make image fit container and avoids losing it when window shrinks
@@ -190,9 +186,6 @@ hr {
     background-color: $color2;
     color: $color3;
     grid-area: about-heading;
-    // box-sizing: border-box;
-    // border: $border;
-    // margin: 2em;
     display: flex;
     align-items: flex-end;
     justify-content: center;
@@ -200,22 +193,22 @@ hr {
   .about-drum {
     grid-area: about-drum;
     background-color: $color3;
-    // grid-area: about-drum;
-    border: 10px solid $color3;
     box-sizing: border-box;
+    border: $border3;
     margin: 1em 4em;
   }
   .inner-drum {
     display: flex;
+    box-sizing: border-box;
     border: 20px solid $color2;
   }
 
   .about-ultimate {
     background-color: $color3;
     grid-area: about-ultimate;
-    border: $border;
     display: flex;
     box-sizing: border-box;
+    border: $border3;
     height: fit-content;
     margin: 1em 4em;
     img {
@@ -223,15 +216,29 @@ hr {
       height: fit-content;
     }
   }
+
+  .inner-ultimate {
+    display: flex;
+    box-sizing: border-box;
+    border: 20px solid $color2;
+  }
+
   .about-yoga {
     background-color: $color3;
     grid-area: about-yoga;
-    border: $border;
     display: flex;
     box-sizing: border-box;
+    border: 10px solid $color3;
     height: fit-content;
     margin: 1em 4em;
   }
+
+  .inner-yoga {
+    display: flex;
+    box-sizing: border-box;
+    border: 20px solid $color2;
+  }
+
   footer {
     .name {
       color: $color2;
@@ -262,9 +269,9 @@ hr {
   display: grid;
   gap: 10px;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 4em repeat(2, 1fr) 4em; 
+  grid-template-rows: 4em repeat(2, 1fr) 4em;
   grid-template-areas:
-  "header header header"
+    "header header header"
     "portfolio-1 portfolio-2 portfolio-3"
     "portfolio-4 portfolio-5 portfolio-6"
     "footer footer footer";
@@ -273,19 +280,15 @@ hr {
   // margin: 0 1em;
   // color: $color2;
   // font-family: EB garamond, sans-serif;
-header{
-  color:$color3;
-}
+  header {
+    color: $color3;
+  }
   // styling of portfolio page images and each portfolio div container
   img {
     border: $border;
     margin-top: 10%;
     width: 250px;
     height: 200px;
-  }
-  div {
-    border: $border;
-    border-width: 0.5px;
   }
   // loop to add padding individual portfolio box
   @for $i from 1 through 6 {
@@ -295,6 +298,9 @@ header{
       margin: 1em 2em;
       color: $color3;
       background-color: $color2;
+      border: $border;
+      box-sizing: border-box;
+
       // overflow: auto;
     }
   }
@@ -302,5 +308,87 @@ header{
   h2 {
     max-width: fit-content;
     border-bottom: $border;
+  }
+}
+
+.contact-container {
+  height: 95%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 4em 1fr 4em;
+  margin: 2em 3em;
+  box-sizing: border-box;
+  border: $border2;
+  header {
+    grid-area: 1 / 1 / 2 / span 3;
+  }
+  form {
+    grid-area: 2 / 2 / 3 / 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+    .name {
+      display: flex;
+      width: 100%;
+      margin-bottom: 1em;
+      #name {
+        box-sizing: border-box;
+        border: 2px solid $color2;
+        border-radius: 5%;
+        width: 25%;
+        height: 2.5em;
+        margin-left: 2em;
+        padding-left: .5em;
+        background-color: #f1f1f1;
+        ;
+      }
+    }
+    .email {
+      display: flex;
+      margin-bottom: 1em;
+      width: 100%;
+      #email {
+        box-sizing: border-box;
+        border: 2px solid $color2;
+        border-radius: 5%;
+        width: 35%;
+        height: 2.5em;
+        margin-left: 2em;
+        padding-left: .5em;
+        background-color: #f1f1f1;
+
+
+      }
+    }
+    .message {
+      margin-bottom: 1em;
+      display: flex;
+      width: 100%;
+      // styling text box for message id in form
+      #message {
+        box-sizing: border-box;
+        border: 2px solid $color2;
+        border-radius: 5%;
+        box-sizing: border-box;
+        width: 50%;
+        margin-left: 0.75em;
+        padding: 1em .5em 15em;
+        background-color: #f1f1f1;
+
+      }
+    }
+    #submit {
+      box-sizing: border-box;
+      border: 1px solid $color2;
+      border-radius: 5%;
+      margin-left: 5.25em;
+      padding: 1em 2em;
+      background-color: #0ce463b5;
+      
+    }
+  }
+  footer {
+    grid-area: 3 / 1 / 3 / span 3;
   }
 }

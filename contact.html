@@ -7,27 +7,61 @@
     <title>Document</title>
   </head>
   <body>
-    <header>
-      <span class="name">Caleb Scott</span>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
-    <footer>
-      <span class="name">Caleb Scott</span>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </footer>
+    <div class="contact-container">
+      <header>
+        <span class="name">Caleb Scott</span>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      <form action="success.html">
+        <div class="name">
+          <label for="name">Name:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your name"
+          />
+        </div>
+        <div class="email">
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+          />
+        </div>
+        <div class="message">
+          <label for="message">Message:</label>
+          <input
+            type="text"
+            id="message"
+            name="message"
+            placeholder="Enter a message (optional)"
+          />
+        </div>
+        <div class="submit">
+          <input type="submit" id="submit" name="submit" />
+        </div>
+      </form>
+      <footer>
+        <span class="name">Caleb Scott</span>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </footer>
+    </div>
   </body>
 </html>
