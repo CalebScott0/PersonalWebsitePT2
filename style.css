@@ -226,13 +226,7 @@ hr {
   font: 1.5em EB Garamond, serif;
 }
 .about-container footer {
-  border-top-color: #e4d9c3;
-}
-.about-container footer .name {
-  color: #e4d9c3;
-}
-.about-container footer a {
-  color: #e4d9c3;
+  background-color: #e4d9c3;
 }
 
 .portfolio-container {
