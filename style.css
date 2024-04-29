@@ -4,13 +4,12 @@ html {
 }
 
 body {
-  background-color: #d8bd8a;
+  background-color: #dfc39a;
   height: 100%;
-  margin: 0;
 }
 
 header {
-  background-color: #270c01;
+  background-color: #121105;
   box-sizing: border-box;
   border: 1px solid black;
   display: flex;
@@ -20,21 +19,22 @@ header {
 }
 
 .name {
-  margin-left: 2em;
+  font: 1.5em EB garamond, serif;
+  margin-left: 6em;
 }
 
 footer {
-  background-color: #e4d9c3;
+  background-color: #121105;
   box-sizing: border-box;
   border: 1px solid black;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #270c01;
+  color: #e4d9c3;
   grid-area: footer;
 }
 footer a {
-  color: #270c01;
+  color: #e4d9c3;
 }
 
 nav {
@@ -50,14 +50,23 @@ ul {
 }
 
 li {
+  height: 100%;
   list-style-type: none;
-  display: inline;
+  padding: 0 0.5em;
   margin: 0 0.5em;
 }
 
+li:hover {
+  background-color: #5c7c07;
+}
+
 a {
+  display: flex;
+  align-items: center;
+  height: 100%;
   text-decoration: none;
   color: #e4d9c3;
+  font: 1.5em EB garamond, serif;
 }
 
 a:hover {
@@ -65,7 +74,7 @@ a:hover {
 }
 
 hr {
-  border-color: #270c01;
+  border-color: #121105;
 }
 
 .index-container {
@@ -77,7 +86,8 @@ hr {
   display: grid;
   grid-template-columns: 25% 1fr 1fr;
   grid-template-rows: 4em 1fr 1fr 4em;
-  grid-template-areas: "header header header" ". index-quote ." "index-image index-bio index-bio" "footer footer footer";
+  grid-template-areas: "header header header" "index-quote index-quote index-quote" "index-image index-bio index-bio" "footer footer footer";
+  color: #121105;
 }
 .index-container header {
   color: #e4d9c3;
@@ -89,23 +99,22 @@ hr {
   grid-area: index-quote;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  margin: 4em 8em 0;
 }
 .index-container .index-quote q {
-  font-size: 3rem;
-}
-.index-container .index-quote p {
-  font-size: 1rem;
+  font: italic 900 4rem EB Garamond, serif;
 }
 .index-container .index-bio {
   grid-area: index-bio;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-top-width: 4em;
-  border-bottom-width: 4em;
-  border-left: none;
+  margin-bottom: 4em;
+  font: 500 2.5em EB Garamond, serif;
+}
+.index-container .index-bio #hello {
+  font: 600 2em EB Garamond, serif;
 }
 .index-container .index-image {
   grid-area: index-image;
@@ -124,21 +133,23 @@ hr {
 .about-container {
   height: -moz-fit-content;
   height: fit-content;
-  background-color: #270c01;
+  background-color: #121105;
+  color: #121105;
   border: 0.5px solid black;
   border-bottom: none;
   margin: 2em 3em 3em 3em;
   display: grid;
   gap: 2em;
   grid-template-columns: 1fr;
-  grid-template-rows: 4em 15% repeat(3, 1fr) 4em;
+  grid-template-rows: 4em 10% repeat(3, 1fr) 4em;
   grid-template-areas: "header" "about-heading" "about-drum" "about-ultimate" "about-yoga" "footer";
 }
 .about-container .name {
-  color: #270c01;
+  color: #121105;
 }
 .about-container a {
-  color: #270c01;
+  color: #121105;
+  height: 100%;
 }
 .about-container img {
   max-width: 100%;
@@ -153,24 +164,29 @@ hr {
   background-color: #e4d9c3;
 }
 .about-container .about-heading {
-  background-color: #270c01;
+  background-color: #121105;
+  font: 2.25em EB Garamond, serif;
   color: #e4d9c3;
   grid-area: about-heading;
   display: flex;
   align-items: flex-end;
   justify-content: center;
+  margin: 2em 0 0;
 }
 .about-container .about-drum {
   grid-area: about-drum;
   background-color: #e4d9c3;
   box-sizing: border-box;
   border: 10px solid #e4d9c3;
+  height: -moz-fit-content;
+  height: fit-content;
   margin: 1em 4em;
 }
 .about-container .inner-drum {
   display: flex;
   box-sizing: border-box;
-  border: 20px solid #270c01;
+  border: 20px solid #121105;
+  font: 1.5em EB Garamond, serif;
 }
 .about-container .about-ultimate {
   background-color: #e4d9c3;
@@ -190,7 +206,8 @@ hr {
 .about-container .inner-ultimate {
   display: flex;
   box-sizing: border-box;
-  border: 20px solid #270c01;
+  border: 20px solid #121105;
+  font: 1.5em EB Garamond, serif;
 }
 .about-container .about-yoga {
   background-color: #e4d9c3;
@@ -205,16 +222,20 @@ hr {
 .about-container .inner-yoga {
   display: flex;
   box-sizing: border-box;
-  border: 20px solid #270c01;
+  border: 20px solid #121105;
+  font: 1.5em EB Garamond, serif;
+}
+.about-container footer {
+  border-top-color: #e4d9c3;
 }
 .about-container footer .name {
-  color: #270c01;
+  color: #e4d9c3;
 }
 .about-container footer a {
-  color: #270c01;
+  color: #e4d9c3;
 }
 
-.container-portfolio {
+.portfolio-container {
   height: -moz-fit-content;
   height: fit-content;
   margin: 2em 3em;
@@ -222,79 +243,117 @@ hr {
   box-sizing: border-box;
   background-color: #e4d9c3;
   display: grid;
-  gap: 10px;
+  gap: 5px;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 4em repeat(2, 1fr) 4em;
   grid-template-areas: "header header header" "portfolio-1 portfolio-2 portfolio-3" "portfolio-4 portfolio-5 portfolio-6" "footer footer footer";
   justify-content: space-between;
 }
-.container-portfolio header {
+.portfolio-container header {
   color: #e4d9c3;
 }
-.container-portfolio img {
+.portfolio-container img {
+  box-sizing: border-box;
   border: 1px solid black;
-  margin-top: 10%;
+  border: 10px solid #e4d9c3;
+  border-width: 2px;
   width: 250px;
   height: 200px;
 }
-.container-portfolio #portfolio-1 {
-  padding: 2%;
+.portfolio-container #portfolio-1 {
+  padding: 1em;
   grid-area: portfolio-1;
-  margin: 1em 2em;
+  margin: 1em;
   color: #e4d9c3;
-  background-color: #270c01;
-  border: 1px solid black;
+  font: 1.5em EB Garamond, serif;
+  background-color: #121105;
   box-sizing: border-box;
+  border: 1px solid black;
 }
-.container-portfolio #portfolio-2 {
-  padding: 2%;
+.portfolio-container .outer-portfolio {
+  box-sizing: border-box;
+  margin: 2em;
+  border: 20px solid #121105;
+}
+.portfolio-container #portfolio-2 {
+  padding: 1em;
   grid-area: portfolio-2;
-  margin: 1em 2em;
+  margin: 1em;
   color: #e4d9c3;
-  background-color: #270c01;
-  border: 1px solid black;
+  font: 1.5em EB Garamond, serif;
+  background-color: #121105;
   box-sizing: border-box;
+  border: 1px solid black;
 }
-.container-portfolio #portfolio-3 {
-  padding: 2%;
+.portfolio-container .outer-portfolio {
+  box-sizing: border-box;
+  margin: 2em;
+  border: 20px solid #121105;
+}
+.portfolio-container #portfolio-3 {
+  padding: 1em;
   grid-area: portfolio-3;
-  margin: 1em 2em;
+  margin: 1em;
   color: #e4d9c3;
-  background-color: #270c01;
-  border: 1px solid black;
+  font: 1.5em EB Garamond, serif;
+  background-color: #121105;
   box-sizing: border-box;
+  border: 1px solid black;
 }
-.container-portfolio #portfolio-4 {
-  padding: 2%;
+.portfolio-container .outer-portfolio {
+  box-sizing: border-box;
+  margin: 2em;
+  border: 20px solid #121105;
+}
+.portfolio-container #portfolio-4 {
+  padding: 1em;
   grid-area: portfolio-4;
-  margin: 1em 2em;
+  margin: 1em;
   color: #e4d9c3;
-  background-color: #270c01;
-  border: 1px solid black;
+  font: 1.5em EB Garamond, serif;
+  background-color: #121105;
   box-sizing: border-box;
+  border: 1px solid black;
 }
-.container-portfolio #portfolio-5 {
-  padding: 2%;
+.portfolio-container .outer-portfolio {
+  box-sizing: border-box;
+  margin: 2em;
+  border: 20px solid #121105;
+}
+.portfolio-container #portfolio-5 {
+  padding: 1em;
   grid-area: portfolio-5;
-  margin: 1em 2em;
+  margin: 1em;
   color: #e4d9c3;
-  background-color: #270c01;
-  border: 1px solid black;
+  font: 1.5em EB Garamond, serif;
+  background-color: #121105;
   box-sizing: border-box;
+  border: 1px solid black;
 }
-.container-portfolio #portfolio-6 {
-  padding: 2%;
+.portfolio-container .outer-portfolio {
+  box-sizing: border-box;
+  margin: 2em;
+  border: 20px solid #121105;
+}
+.portfolio-container #portfolio-6 {
+  padding: 1em;
   grid-area: portfolio-6;
-  margin: 1em 2em;
+  margin: 1em;
   color: #e4d9c3;
-  background-color: #270c01;
-  border: 1px solid black;
+  font: 1.5em EB Garamond, serif;
+  background-color: #121105;
   box-sizing: border-box;
+  border: 1px solid black;
 }
-.container-portfolio h2 {
+.portfolio-container .outer-portfolio {
+  box-sizing: border-box;
+  margin: 2em;
+  border: 20px solid #121105;
+}
+.portfolio-container h2 {
   max-width: -moz-fit-content;
   max-width: fit-content;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #e4d9c3;
 }
 
 .contact-container {
@@ -304,10 +363,13 @@ hr {
   grid-template-rows: 4em 1fr 4em;
   margin: 2em 3em;
   box-sizing: border-box;
+  background-color: #e4d9c3;
   border: 0.5px solid black;
+  color: #121105;
 }
 .contact-container header {
   grid-area: 1/1/2/span 3;
+  color: #e4d9c3;
 }
 .contact-container form {
   grid-area: 2/2/3/4;
@@ -320,40 +382,42 @@ hr {
   display: flex;
   width: 100%;
   margin-bottom: 1em;
+  margin-left: 0;
+  font: 2em EB Garamond, serif;
 }
 .contact-container form .name #name {
   box-sizing: border-box;
-  border: 2px solid #270c01;
+  border: 2px solid #121105;
   border-radius: 5%;
   width: 25%;
-  height: 2.5em;
-  margin-left: 2em;
-  padding-left: 0.5em;
+  margin-left: 2.75em;
+  padding: 1em;
   background-color: #f1f1f1;
 }
 .contact-container form .email {
   display: flex;
   margin-bottom: 1em;
   width: 100%;
+  font: 2em EB Garamond, serif;
 }
 .contact-container form .email #email {
   box-sizing: border-box;
-  border: 2px solid #270c01;
+  border: 2px solid #121105;
   border-radius: 5%;
   width: 35%;
-  height: 2.5em;
-  margin-left: 2em;
-  padding-left: 0.5em;
+  margin-left: 3em;
+  padding: 1em;
   background-color: #f1f1f1;
 }
 .contact-container form .message {
   margin-bottom: 1em;
   display: flex;
   width: 100%;
+  font: 2em EB Garamond, serif;
 }
 .contact-container form .message #message {
   box-sizing: border-box;
-  border: 2px solid #270c01;
+  border: 2px solid #121105;
   border-radius: 5%;
   box-sizing: border-box;
   width: 50%;
@@ -363,12 +427,25 @@ hr {
 }
 .contact-container form #submit {
   box-sizing: border-box;
-  border: 1px solid #270c01;
+  border: 1px solid #121105;
   border-radius: 5%;
-  margin-left: 5.25em;
-  padding: 1em 2em;
-  background-color: rgba(12, 228, 99, 0.7098039216);
+  margin-left: 5em;
+  padding: 0.5em 2em;
+  background-color: #5c7c07;
+  font: 1.5em EB Garamond, serif;
+  color: #e4d9c3;
+}
+.contact-container form #submit:hover {
+  background-color: #121105;
 }
 .contact-container footer {
   grid-area: 3/1/3/span 3;
+}
+
+.success {
+  background-color: #dfc39a;
+  display: flex;
+  justify-content: center;
+  color: #121105;
+  font: 10em EB garamond, serif;
 }/*# sourceMappingURL=style.css.map */
